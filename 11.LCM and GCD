@@ -1,0 +1,29 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+def find_lcm_gcd(numbers):
+    lcm_result = numbers[0]
+    gcd_result = numbers[0]
+
+    for num in numbers[1:]:
+        lcm_result = lcm(lcm_result, num)
+        gcd_result = gcd(gcd_result, num)
+
+    return lcm_result, gcd_result
+
+# Input
+n = int(input("N value: "))
+numbers = []
+for i in range(1, n + 1):
+    num = int(input(f"Number {i}: "))
+    numbers.append(num)
+
+# Output
+lcm_result, gcd_result = find_lcm_gcd(numbers)
+print("LCM =", lcm_result)
+print("GCD =", gcd_result)
