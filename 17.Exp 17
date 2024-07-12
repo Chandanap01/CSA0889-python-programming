@@ -1,0 +1,11 @@
+def print_numbers(M, N, K):
+    for num in range(M, N + 1, K):
+        print(num, end=", ")
+
+# Sample Input
+M = 50
+N = 100
+K = 7
+
+# Output
+print_numbers(M, N, K)
