@@ -1,0 +1,9 @@
+def find_maximum(a, b, c):
+    return max(a, b, c)
+
+# Input
+numbers = input("Enter three numbers separated by space: ").split()
+a, b, c = map(int, numbers)
+
+# Output
+print("Maximum of the three numbers:", find_maximum(a, b, c))
