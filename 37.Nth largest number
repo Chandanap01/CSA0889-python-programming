@@ -1,0 +1,15 @@
+def nth_largest_number(numbers, n):
+    sorted_numbers = sorted(numbers, reverse=True)
+    return sorted_numbers[n - 1]
+
+# Sample list of numbers
+numbers = [10, 20, 30, 40, 50]
+
+# Nth value to find
+n = 3
+
+# Find the Nth largest number
+nth_largest = nth_largest_number(numbers, n)
+
+# Output
+print(f"The {n}th largest number in the list is:", nth_largest)
